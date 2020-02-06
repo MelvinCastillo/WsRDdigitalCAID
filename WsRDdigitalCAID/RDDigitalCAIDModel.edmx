@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CAIDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PAX00000">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="RECORDID" Type="int" Nullable="false" />
+          <Property Name="CATEGORIAID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRE1" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="NOMBRE2" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="APELLIDO1" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="APELLIDO2" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="FULLNAME" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="APODO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FNACE" Type="datetime" Nullable="false" />
+          <Property Name="PAISID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CIUDADID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SEXOID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ESASEGURADO" Type="bit" Nullable="false" />
+          <Property Name="ARSID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NSSID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="COINDICION" Type="int" Nullable="false" />
+          <Property Name="RESIDECON" Type="int" Nullable="false" />
+          <Property Name="RESIDECON1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CUIDADOPOR" Type="int" Nullable="false" />
+          <Property Name="CUIDADOPOR1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AGENTSOCIALID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MEDICOID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TERAPISTAID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWCDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWMDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWUSERID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PREDIAGNOSTICO" Type="varchar" MaxLength="50" />
+          <Property Name="OTROSPREDIAGNOSTICO" Type="varchar" MaxLength="255" />
+          <Property Name="ESTATUS" Type="varchar" MaxLength="50" />
+          <Property Name="MOTIVOESTATUS" Type="varchar(max)" />
+          <Property Name="InstitucionesRelacionadas" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Diagnostico1" Type="varchar" MaxLength="50" />
+          <Property Name="Diagnostico2" Type="varchar" MaxLength="50" />
+          <Property Name="EstatusPediatria" Type="varchar" MaxLength="5" />
+          <Property Name="EstatusEVD" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="EstatusPruebasPendientes" Type="varchar" MaxLength="80" />
+          <Property Name="DetalledePruebas" Type="varchar" MaxLength="500" />
+          <Property Name="Notas" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="PAX00001">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FILIACIONID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NSSID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CEDULAID" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="PASAPORTEID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRE1" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="NOMBRE2" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="APELLIDO1" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="APELLIDO2" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="FULLNAME" Type="varchar" MaxLength="125" Nullable="false" />
+          <Property Name="FNACE" Type="datetime" Nullable="false" />
+          <Property Name="ESTCIVILID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ESCOLARIDADID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ESCALAID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ESEMPLEADO" Type="bit" Nullable="false" />
+          <Property Name="ROWIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWCDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWMDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWUSERID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PAXESCOLARIDAD">
+          <Key>
+            <PropertyRef Name="RECORDID" />
+            <PropertyRef Name="ROWSGXID" />
+          </Key>
+          <Property Name="RECORDID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CENTROEDUCATIVO" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="GRADO" Type="varchar" MaxLength="13" />
+          <Property Name="CATEGORIA" Type="varchar" MaxLength="80" />
+          <Property Name="TIPOCATEGORIA" Type="varchar" MaxLength="100" />
+          <Property Name="ESTATUS" Type="varchar" MaxLength="100" />
+          <Property Name="Director" Type="varchar" MaxLength="100" />
+          <Property Name="Maestro" Type="varchar" MaxLength="100" />
+          <Property Name="MaestroAsistente" Type="varchar" MaxLength="100" />
+          <Property Name="FECHADIGITACION" Type="datetime" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="200" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+          <Property Name="DISTRITOESCOLAR" Type="varchar" MaxLength="10" />
+          <Property Name="RESPONSABLEDISTRITO" Type="varchar" MaxLength="200" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="50" />
+          <Property Name="FECHAACTUALIZACION" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SMX00100">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="PAISID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PROVINCIAID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MUNICIPIOID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SECTORID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ZONAID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TEL1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TEL2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TEL3" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TEL4" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ROWIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWCDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWMDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWUSERID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PROPIETARIOTEL1" Type="varchar" MaxLength="50" />
+          <Property Name="PROPIETARIOTEL2" Type="varchar" MaxLength="50" />
+          <Property Name="PROPIETARIOTEL3" Type="varchar" MaxLength="50" />
+          <Property Name="PROPIETARIOTEL4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SMX00500">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MEDID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TERID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ENFID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ORIGENID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FECHAINI" Type="datetime" Nullable="false" />
+          <Property Name="FECHAFIN" Type="datetime" Nullable="false" />
+          <Property Name="HORAINI" Type="datetime" Nullable="false" />
+          <Property Name="HORAFIN" Type="datetime" Nullable="false" />
+          <Property Name="DIA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ASISTIOULTCITA" Type="bit" Nullable="false" />
+          <Property Name="CITAESTATUS" Type="int" Nullable="false" />
+          <Property Name="HORAORDINAL" Type="int" Nullable="false" />
+          <Property Name="ROWIDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWCDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWMDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROWUSERID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TERAPIAINI" Type="datetime" />
+          <Property Name="TERAPIAFIN" Type="datetime" />
+          <Property Name="DETALLES" Type="varchar(max)" />
+          <Property Name="TIPO" Type="varchar" MaxLength="5" />
+          <Property Name="TIPOGUID" Type="varchar" MaxLength="50" />
+          <Property Name="DETTERAPEUTA" Type="varchar" MaxLength="500" />
+          <Property Name="DETAUSENCIATERAPEUTA" Type="varchar" MaxLength="500" />
+          <Property Name="COMENTARIOCAMBIOESTATUS" Type="varchar" MaxLength="1000" />
+          <Property Name="ESNUEVO" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CAID.dbo.vCLASIFICADORES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vCLASIFICADORES">
+          
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="ROWGUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="atipoclas" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="bidclasif" Type="nvarchar" MaxLength="50" />
+          <Property Name="ctituloclas" Type="varchar" MaxLength="806" />
+          <Property Name="dtipoclaspadre" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="eidclaspadre" Type="varchar" MaxLength="50" />
+          <Property Name="etituloclaspad" Type="varchar" MaxLength="100" />
+          <Property Name="hfechareg" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CAID.dbo.vPacienteRdDigital' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vPacienteRdDigital">
+          <Key>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <PropertyRef Name="PREDIAGNOSTICO" />
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="RECORDID" Type="int" Nullable="false" />
+          <Property Name="CENTRO" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NOMBRES" Type="varchar" MaxLength="51" Nullable="false" />
+          <Property Name="APELLIDO1" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="APELLIDO2" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="EDAD" Type="int" />
+          <Property Name="FECHANACIMIENTO" Type="nvarchar" MaxLength="4000" />
+          <Property Name="FECHAINGRESO" Type="datetime" Nullable="false" />
+          <Property Name="TIPOPROCESO" Type="varchar" MaxLength="50" />
+          <Property Name="AGENTESOCIAL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EMAILAGENTESOCIAL" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="CEDULAAGENTESOCIAL" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="SERVICIORECIBE" Type="varchar" MaxLength="50" />
+          <Property Name="HORARIOSERVICIO" Type="varchar" MaxLength="84" />
+          <Property Name="NUCLEOFAMILIARNOMBRES" Type="varchar" MaxLength="51" />
+          <Property Name="NUCLEOFAMILIARAPELLIDOS" Type="varchar" MaxLength="51" />
+          <Property Name="NUCLEOFAMILIARCEDULA" Type="varchar" MaxLength="8000" />
+          <Property Name="NUCLEOFAMILIARPARENTESCO" Type="varchar" MaxLength="50" />
+          <Property Name="ROWSGXID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROWGUID" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PREDIAGNOSTICO" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CAIDModelStoreContainer">
+          <EntitySet Name="PAX00000" EntityType="Self.PAX00000" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAX00001" EntityType="Self.PAX00001" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAXESCOLARIDAD" EntityType="Self.PAXESCOLARIDAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMX00100" EntityType="Self.SMX00100" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SMX00500" EntityType="Self.SMX00500" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vCLASIFICADORES" EntityType="Self.vCLASIFICADORES" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vCLASIFICADORES].[ROWGUID] AS [ROWGUID], 
+    [vCLASIFICADORES].[atipoclas] AS [atipoclas], 
+    [vCLASIFICADORES].[bidclasif] AS [bidclasif], 
+    [vCLASIFICADORES].[ctituloclas] AS [ctituloclas], 
+    [vCLASIFICADORES].[dtipoclaspadre] AS [dtipoclaspadre], 
+    [vCLASIFICADORES].[eidclaspadre] AS [eidclaspadre], 
+    [vCLASIFICADORES].[etituloclaspad] AS [etituloclaspad], 
+    [vCLASIFICADORES].[hfechareg] AS [hfechareg]
+    FROM [dbo].[vCLASIFICADORES] AS [vCLASIFICADORES]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vPacienteRdDigital" EntityType="Self.vPacienteRdDigital" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vPacienteRdDigital].[RECORDID] AS [RECORDID], 
+    [vPacienteRdDigital].[CENTRO] AS [CENTRO], 
+    [vPacienteRdDigital].[NOMBRES] AS [NOMBRES], 
+    [vPacienteRdDigital].[APELLIDO1] AS [APELLIDO1], 
+    [vPacienteRdDigital].[APELLIDO2] AS [APELLIDO2], 
+    [vPacienteRdDigital].[EDAD] AS [EDAD], 
+    [vPacienteRdDigital].[FECHANACIMIENTO] AS [FECHANACIMIENTO], 
+    [vPacienteRdDigital].[FECHAINGRESO] AS [FECHAINGRESO], 
+    [vPacienteRdDigital].[TIPOPROCESO] AS [TIPOPROCESO], 
+    [vPacienteRdDigital].[AGENTESOCIAL] AS [AGENTESOCIAL], 
+    [vPacienteRdDigital].[EMAILAGENTESOCIAL] AS [EMAILAGENTESOCIAL], 
+    [vPacienteRdDigital].[CEDULAAGENTESOCIAL] AS [CEDULAAGENTESOCIAL], 
+    [vPacienteRdDigital].[SERVICIORECIBE] AS [SERVICIORECIBE], 
+    [vPacienteRdDigital].[HORARIOSERVICIO] AS [HORARIOSERVICIO], 
+    [vPacienteRdDigital].[NUCLEOFAMILIARNOMBRES] AS [NUCLEOFAMILIARNOMBRES], 
+    [vPacienteRdDigital].[NUCLEOFAMILIARAPELLIDOS] AS [NUCLEOFAMILIARAPELLIDOS], 
+    [vPacienteRdDigital].[NUCLEOFAMILIARCEDULA] AS [NUCLEOFAMILIARCEDULA], 
+    [vPacienteRdDigital].[NUCLEOFAMILIARPARENTESCO] AS [NUCLEOFAMILIARPARENTESCO], 
+    [vPacienteRdDigital].[ROWSGXID] AS [ROWSGXID], 
+    [vPacienteRdDigital].[ROWGUID] AS [ROWGUID], 
+    [vPacienteRdDigital].[PREDIAGNOSTICO] AS [PREDIAGNOSTICO]
+    FROM [dbo].[vPacienteRdDigital] AS [vPacienteRdDigital]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CAIDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PAX00000">
+          <Documentation>
+            <Summary>Prospectos/Pacientes</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="RECORDID" Type="Int32" Nullable="false" />
+          <Property Name="CATEGORIAID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO1" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FULLNAME" Type="String" MaxLength="125" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APODO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FNACE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PAISID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIUDADID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEXOID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESASEGURADO" Type="Boolean" Nullable="false" />
+          <Property Name="ARSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NSSID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COINDICION" Type="Int32" Nullable="false" />
+          <Property Name="RESIDECON" Type="Int32" Nullable="false" />
+          <Property Name="RESIDECON1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CUIDADOPOR" Type="Int32" Nullable="false" />
+          <Property Name="CUIDADOPOR1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AGENTSOCIALID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MEDICOID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TERAPISTAID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROWIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROWGUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROWCDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWMDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWUSERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROWSGXID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PREDIAGNOSTICO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OTROSPREDIAGNOSTICO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MOTIVOESTATUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="InstitucionesRelacionadas" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Diagnostico1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Diagnostico2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EstatusPediatria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="EstatusEVD" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EstatusPruebasPendientes" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="DetalledePruebas" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Notas" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="CAIDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PAX00000" EntityType="Self.PAX00000" />
+          <EntitySet Name="SMX00100" EntityType="CAIDModel.SMX00100" />
+          <EntitySet Name="SMX00500" EntityType="CAIDModel.SMX00500" />
+          <EntitySet Name="PAX00001" EntityType="CAIDModel.PAX00001" />
+          <EntitySet Name="vCLASIFICADORES" EntityType="CAIDModel.vCLASIFICADORES" />
+          <EntitySet Name="PAXESCOLARIDAD" EntityType="CAIDModel.PAXESCOLARIDAD" />
+          <EntitySet Name="vPacienteRdDigital" EntityType="CAIDModel.vPacienteRdDigital" />
+        </EntityContainer>
+        <EntityType Name="SMX00100">
+          <Documentation>
+            <Summary>Direcciones Prospectos/Pacientes</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PAISID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROVINCIAID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MUNICIPIOID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SECTORID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZONAID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEL1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TEL2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TEL3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TEL4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ROWIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROWGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWCDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWMDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWUSERID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWSGXID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROPIETARIOTEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROPIETARIOTEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROPIETARIOTEL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROPIETARIOTEL4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SMX00500">
+          <Documentation>
+            <Summary>Citas Caid</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MEDID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TERID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ENFID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ORIGENID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAINI" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHAFIN" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HORAINI" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="HORAFIN" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DIA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OBSERVACION" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ASISTIOULTCITA" Type="Boolean" Nullable="false" />
+          <Property Name="CITAESTATUS" Type="Int32" Nullable="false" />
+          <Property Name="HORAORDINAL" Type="Int32" Nullable="false" />
+          <Property Name="ROWIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROWGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWCDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWMDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWUSERID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWSGXID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TERAPIAINI" Type="DateTime" Precision="3" />
+          <Property Name="TERAPIAFIN" Type="DateTime" Precision="3" />
+          <Property Name="DETALLES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TIPOGUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DETTERAPEUTA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DETAUSENCIATERAPEUTA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="COMENTARIOCAMBIOESTATUS" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ESNUEVO" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PAX00001">
+          <Documentation>
+            <Summary>Nucleo Familiar Prospectos/Pacientes</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="REFGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FILIACIONID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NSSID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULAID" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="PASAPORTEID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE1" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE2" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO2" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="FULLNAME" Type="String" Nullable="false" MaxLength="125" FixedLength="false" Unicode="false" />
+          <Property Name="FNACE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ESTCIVILID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESCOLARIDADID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESCALAID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESEMPLEADO" Type="Boolean" Nullable="false" />
+          <Property Name="ROWIDX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROWGUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWCDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWMDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROWUSERID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWSGXID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vCLASIFICADORES">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+          </Key>
+          <Property Name="atipoclas" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="bidclasif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ctituloclas" Type="String" MaxLength="806" FixedLength="false" Unicode="false" />
+          <Property Name="dtipoclaspadre" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="eidclaspadre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="etituloclaspad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="hfechareg" Type="DateTime" Precision="3" />
+          <Property Name="ROWGUID" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PAXESCOLARIDAD">
+          <Key>
+            <PropertyRef Name="RECORDID" />
+            <PropertyRef Name="ROWSGXID" />
+          </Key>
+          <Property Name="RECORDID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CENTROEDUCATIVO" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="GRADO" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="CATEGORIA" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="TIPOCATEGORIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Director" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Maestro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MaestroAsistente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FECHADIGITACION" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ROWSGXID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DISTRITOESCOLAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RESPONSABLEDISTRITO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ROWGUID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAACTUALIZACION" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="vPacienteRdDigital">
+          <Key>
+            <PropertyRef Name="ROWGUID" />
+            <PropertyRef Name="PREDIAGNOSTICO" />
+          </Key>
+          <Property Name="RECORDID" Type="Int32" Nullable="false" />
+          <Property Name="CENTRO" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRES" Type="String" Nullable="false" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO1" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO2" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="EDAD" Type="Int32" />
+          <Property Name="FECHAINGRESO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TIPOPROCESO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AGENTESOCIAL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EMAILAGENTESOCIAL" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULAAGENTESOCIAL" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIORECIBE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HORARIOSERVICIO" Type="String" MaxLength="84" FixedLength="false" Unicode="false" />
+          <Property Name="NUCLEOFAMILIARNOMBRES" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="NUCLEOFAMILIARAPELLIDOS" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+          <Property Name="NUCLEOFAMILIARCEDULA" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="NUCLEOFAMILIARPARENTESCO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWSGXID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROWGUID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PREDIAGNOSTICO" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FECHANACIMIENTO" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAIDModelStoreContainer" CdmEntityContainer="CAIDEntities">
+    <EntitySetMapping Name="PAX00000">
+      <EntityTypeMapping TypeName="IsTypeOf(CAIDModel.PAX00000)">
+        <MappingFragment StoreEntitySet="PAX00000">
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+          <ScalarProperty Name="CATEGORIAID" ColumnName="CATEGORIAID" />
+          <ScalarProperty Name="NOMBRE1" ColumnName="NOMBRE1" />
+          <ScalarProperty Name="NOMBRE2" ColumnName="NOMBRE2" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="APODO" ColumnName="APODO" />
+          <ScalarProperty Name="FNACE" ColumnName="FNACE" />
+          <ScalarProperty Name="PAISID" ColumnName="PAISID" />
+          <ScalarProperty Name="CIUDADID" ColumnName="CIUDADID" />
+          <ScalarProperty Name="SEXOID" ColumnName="SEXOID" />
+          <ScalarProperty Name="ESASEGURADO" ColumnName="ESASEGURADO" />
+          <ScalarProperty Name="ARSID" ColumnName="ARSID" />
+          <ScalarProperty Name="NSSID" ColumnName="NSSID" />
+          <ScalarProperty Name="COINDICION" ColumnName="COINDICION" />
+          <ScalarProperty Name="RESIDECON" ColumnName="RESIDECON" />
+          <ScalarProperty Name="RESIDECON1" ColumnName="RESIDECON1" />
+          <ScalarProperty Name="CUIDADOPOR" ColumnName="CUIDADOPOR" />
+          <ScalarProperty Name="CUIDADOPOR1" ColumnName="CUIDADOPOR1" />
+          <ScalarProperty Name="AGENTSOCIALID" ColumnName="AGENTSOCIALID" />
+          <ScalarProperty Name="MEDICOID" ColumnName="MEDICOID" />
+          <ScalarProperty Name="TERAPISTAID" ColumnName="TERAPISTAID" />
+          <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+          <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+          <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+          <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="PREDIAGNOSTICO" ColumnName="PREDIAGNOSTICO" />
+          <ScalarProperty Name="OTROSPREDIAGNOSTICO" ColumnName="OTROSPREDIAGNOSTICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="MOTIVOESTATUS" ColumnName="MOTIVOESTATUS" />
+          <ScalarProperty Name="InstitucionesRelacionadas" ColumnName="InstitucionesRelacionadas" />
+          <ScalarProperty Name="Diagnostico1" ColumnName="Diagnostico1" />
+          <ScalarProperty Name="Diagnostico2" ColumnName="Diagnostico2" />
+          <ScalarProperty Name="EstatusPediatria" ColumnName="EstatusPediatria" />
+          <ScalarProperty Name="EstatusEVD" ColumnName="EstatusEVD" />
+          <ScalarProperty Name="EstatusPruebasPendientes" ColumnName="EstatusPruebasPendientes" />
+          <ScalarProperty Name="DetalledePruebas" ColumnName="DetalledePruebas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <EntitySetMapping Name="SMX00100">
+            <EntityTypeMapping TypeName="CAIDModel.SMX00100">
+              <MappingFragment StoreEntitySet="SMX00100">
+                <ScalarProperty Name="PROPIETARIOTEL4" ColumnName="PROPIETARIOTEL4" />
+                <ScalarProperty Name="PROPIETARIOTEL3" ColumnName="PROPIETARIOTEL3" />
+                <ScalarProperty Name="PROPIETARIOTEL2" ColumnName="PROPIETARIOTEL2" />
+                <ScalarProperty Name="PROPIETARIOTEL1" ColumnName="PROPIETARIOTEL1" />
+                <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+                <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+                <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+                <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+                <ScalarProperty Name="TEL4" ColumnName="TEL4" />
+                <ScalarProperty Name="TEL3" ColumnName="TEL3" />
+                <ScalarProperty Name="TEL2" ColumnName="TEL2" />
+                <ScalarProperty Name="TEL1" ColumnName="TEL1" />
+                <ScalarProperty Name="ZONAID" ColumnName="ZONAID" />
+                <ScalarProperty Name="SECTORID" ColumnName="SECTORID" />
+                <ScalarProperty Name="MUNICIPIOID" ColumnName="MUNICIPIOID" />
+                <ScalarProperty Name="PROVINCIAID" ColumnName="PROVINCIAID" />
+                <ScalarProperty Name="PAISID" ColumnName="PAISID" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SMX00500">
+            <EntityTypeMapping TypeName="CAIDModel.SMX00500">
+              <MappingFragment StoreEntitySet="SMX00500">
+                <ScalarProperty Name="ESNUEVO" ColumnName="ESNUEVO" />
+                <ScalarProperty Name="COMENTARIOCAMBIOESTATUS" ColumnName="COMENTARIOCAMBIOESTATUS" />
+                <ScalarProperty Name="DETAUSENCIATERAPEUTA" ColumnName="DETAUSENCIATERAPEUTA" />
+                <ScalarProperty Name="DETTERAPEUTA" ColumnName="DETTERAPEUTA" />
+                <ScalarProperty Name="TIPOGUID" ColumnName="TIPOGUID" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="DETALLES" ColumnName="DETALLES" />
+                <ScalarProperty Name="TERAPIAFIN" ColumnName="TERAPIAFIN" />
+                <ScalarProperty Name="TERAPIAINI" ColumnName="TERAPIAINI" />
+                <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+                <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+                <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+                <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+                <ScalarProperty Name="HORAORDINAL" ColumnName="HORAORDINAL" />
+                <ScalarProperty Name="CITAESTATUS" ColumnName="CITAESTATUS" />
+                <ScalarProperty Name="ASISTIOULTCITA" ColumnName="ASISTIOULTCITA" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="HORAFIN" ColumnName="HORAFIN" />
+                <ScalarProperty Name="HORAINI" ColumnName="HORAINI" />
+                <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+                <ScalarProperty Name="FECHAINI" ColumnName="FECHAINI" />
+                <ScalarProperty Name="ORIGENID" ColumnName="ORIGENID" />
+                <ScalarProperty Name="ENFID" ColumnName="ENFID" />
+                <ScalarProperty Name="TERID" ColumnName="TERID" />
+                <ScalarProperty Name="MEDID" ColumnName="MEDID" />
+                <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAX00001">
+            <EntityTypeMapping TypeName="CAIDModel.PAX00001">
+              <MappingFragment StoreEntitySet="PAX00001">
+                <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+                <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+                <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+                <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+                <ScalarProperty Name="ESEMPLEADO" ColumnName="ESEMPLEADO" />
+                <ScalarProperty Name="ESCALAID" ColumnName="ESCALAID" />
+                <ScalarProperty Name="ESCOLARIDADID" ColumnName="ESCOLARIDADID" />
+                <ScalarProperty Name="ESTCIVILID" ColumnName="ESTCIVILID" />
+                <ScalarProperty Name="FNACE" ColumnName="FNACE" />
+                <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+                <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+                <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+                <ScalarProperty Name="NOMBRE2" ColumnName="NOMBRE2" />
+                <ScalarProperty Name="NOMBRE1" ColumnName="NOMBRE1" />
+                <ScalarProperty Name="PASAPORTEID" ColumnName="PASAPORTEID" />
+                <ScalarProperty Name="CEDULAID" ColumnName="CEDULAID" />
+                <ScalarProperty Name="NSSID" ColumnName="NSSID" />
+                <ScalarProperty Name="FILIACIONID" ColumnName="FILIACIONID" />
+                <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vCLASIFICADORES">
+            <EntityTypeMapping TypeName="CAIDModel.vCLASIFICADORES">
+              <MappingFragment StoreEntitySet="vCLASIFICADORES">
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="hfechareg" ColumnName="hfechareg" />
+                <ScalarProperty Name="etituloclaspad" ColumnName="etituloclaspad" />
+                <ScalarProperty Name="eidclaspadre" ColumnName="eidclaspadre" />
+                <ScalarProperty Name="dtipoclaspadre" ColumnName="dtipoclaspadre" />
+                <ScalarProperty Name="ctituloclas" ColumnName="ctituloclas" />
+                <ScalarProperty Name="bidclasif" ColumnName="bidclasif" />
+                <ScalarProperty Name="atipoclas" ColumnName="atipoclas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAXESCOLARIDAD">
+            <EntityTypeMapping TypeName="CAIDModel.PAXESCOLARIDAD">
+              <MappingFragment StoreEntitySet="PAXESCOLARIDAD">
+                <ScalarProperty Name="FECHAACTUALIZACION" ColumnName="FECHAACTUALIZACION" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="RESPONSABLEDISTRITO" ColumnName="RESPONSABLEDISTRITO" />
+                <ScalarProperty Name="DISTRITOESCOLAR" ColumnName="DISTRITOESCOLAR" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="FECHADIGITACION" ColumnName="FECHADIGITACION" />
+                <ScalarProperty Name="MaestroAsistente" ColumnName="MaestroAsistente" />
+                <ScalarProperty Name="Maestro" ColumnName="Maestro" />
+                <ScalarProperty Name="Director" ColumnName="Director" />
+                <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+                <ScalarProperty Name="TIPOCATEGORIA" ColumnName="TIPOCATEGORIA" />
+                <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+                <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+                <ScalarProperty Name="CENTROEDUCATIVO" ColumnName="CENTROEDUCATIVO" />
+                <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vPacienteRdDigital">
+            <EntityTypeMapping TypeName="CAIDModel.vPacienteRdDigital">
+              <MappingFragment StoreEntitySet="vPacienteRdDigital">
+                <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+                <ScalarProperty Name="PREDIAGNOSTICO" ColumnName="PREDIAGNOSTICO" />
+                <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+                <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+                <ScalarProperty Name="NUCLEOFAMILIARPARENTESCO" ColumnName="NUCLEOFAMILIARPARENTESCO" />
+                <ScalarProperty Name="NUCLEOFAMILIARCEDULA" ColumnName="NUCLEOFAMILIARCEDULA" />
+                <ScalarProperty Name="NUCLEOFAMILIARAPELLIDOS" ColumnName="NUCLEOFAMILIARAPELLIDOS" />
+                <ScalarProperty Name="NUCLEOFAMILIARNOMBRES" ColumnName="NUCLEOFAMILIARNOMBRES" />
+                <ScalarProperty Name="HORARIOSERVICIO" ColumnName="HORARIOSERVICIO" />
+                <ScalarProperty Name="SERVICIORECIBE" ColumnName="SERVICIORECIBE" />
+                <ScalarProperty Name="CEDULAAGENTESOCIAL" ColumnName="CEDULAAGENTESOCIAL" />
+                <ScalarProperty Name="EMAILAGENTESOCIAL" ColumnName="EMAILAGENTESOCIAL" />
+                <ScalarProperty Name="AGENTESOCIAL" ColumnName="AGENTESOCIAL" />
+                <ScalarProperty Name="TIPOPROCESO" ColumnName="TIPOPROCESO" />
+                <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+                <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+                <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+                <ScalarProperty Name="CENTRO" ColumnName="CENTRO" />
+                <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

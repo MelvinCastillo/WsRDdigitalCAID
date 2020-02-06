@@ -1,0 +1,2 @@
+bin\Release\OfficeAppManifests\WsRDdigitalCAID.OfficeManifest.xml
+C:\MC\SIGES\app\ES_SIGES_CAID_V2\CAID_V2\WsRDdigitalCAID.Office\bin\Release\WsRDdigitalCAID.Office.debugapp

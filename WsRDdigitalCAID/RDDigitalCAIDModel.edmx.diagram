@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cb0f628be180408997190bb1327f4f0c" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="CAIDModel.PAX00000" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAIDModel.SMX00100" Width="1.5" PointX="8" PointY="0.625" />
+        <EntityTypeShape EntityType="CAIDModel.SMX00500" Width="1.5" PointX="6.375" PointY="0.5" />
+        <EntityTypeShape EntityType="CAIDModel.PAX00001" Width="1.5" PointX="2.75" PointY="0.5" />
+        <EntityTypeShape EntityType="CAIDModel.vCLASIFICADORES" Width="1.875" PointX="4.375" PointY="0.625" />
+        <EntityTypeShape EntityType="CAIDModel.PAXESCOLARIDAD" Width="2.25" PointX="11.25" PointY="0.625" />
+        <EntityTypeShape EntityType="CAIDModel.vPacienteRdDigital" Width="2.25" PointX="9.625" PointY="0.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

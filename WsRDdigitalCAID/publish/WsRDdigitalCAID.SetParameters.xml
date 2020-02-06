@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/WsRDdigitalCAID_deploy" />
+  <setParameter name="CAIDEntities-Web.config Connection String" value="metadata=res://*/RDDigitalCAIDModel.csdl|res://*/RDDigitalCAIDModel.ssdl|res://*/RDDigitalCAIDModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=CAIDSIGES01\CAID;Initial Catalog=CAID;Persist Security Info=True;User ID=siges;Password=CAID@P@$$W0rd1&quot;" />
+</parameters>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\MC\SIGES\app\ES_SIGES_CAID_V2\CAID_V2\WsRDdigitalCAID\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\MC\SIGES\app\ES_SIGES_CAID_V2\CAID_V2\WsRDdigitalCAID\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\MC\SIGES\app\ES_SIGES_CAID_V2\CAID_V2\WsRDdigitalCAID\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

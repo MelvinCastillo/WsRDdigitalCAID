@@ -1,0 +1,1 @@
+C:\MC\SIGES\app\ES_SIGES_CAID_V2\CAID_V2\WsRDdigitalCAID.Office\bin\Release\ApplicationInsights.config

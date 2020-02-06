@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAIDModelStoreContainer" CdmEntityContainer="CAIDEntities">
+    <EntitySetMapping Name="PAX00000">
+      <EntityTypeMapping TypeName="IsTypeOf(CAIDModel.PAX00000)">
+        <MappingFragment StoreEntitySet="PAX00000">
+          <ScalarProperty Name="Notas" ColumnName="Notas" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+          <ScalarProperty Name="CATEGORIAID" ColumnName="CATEGORIAID" />
+          <ScalarProperty Name="NOMBRE1" ColumnName="NOMBRE1" />
+          <ScalarProperty Name="NOMBRE2" ColumnName="NOMBRE2" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="APODO" ColumnName="APODO" />
+          <ScalarProperty Name="FNACE" ColumnName="FNACE" />
+          <ScalarProperty Name="PAISID" ColumnName="PAISID" />
+          <ScalarProperty Name="CIUDADID" ColumnName="CIUDADID" />
+          <ScalarProperty Name="SEXOID" ColumnName="SEXOID" />
+          <ScalarProperty Name="ESASEGURADO" ColumnName="ESASEGURADO" />
+          <ScalarProperty Name="ARSID" ColumnName="ARSID" />
+          <ScalarProperty Name="NSSID" ColumnName="NSSID" />
+          <ScalarProperty Name="COINDICION" ColumnName="COINDICION" />
+          <ScalarProperty Name="RESIDECON" ColumnName="RESIDECON" />
+          <ScalarProperty Name="RESIDECON1" ColumnName="RESIDECON1" />
+          <ScalarProperty Name="CUIDADOPOR" ColumnName="CUIDADOPOR" />
+          <ScalarProperty Name="CUIDADOPOR1" ColumnName="CUIDADOPOR1" />
+          <ScalarProperty Name="AGENTSOCIALID" ColumnName="AGENTSOCIALID" />
+          <ScalarProperty Name="MEDICOID" ColumnName="MEDICOID" />
+          <ScalarProperty Name="TERAPISTAID" ColumnName="TERAPISTAID" />
+          <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+          <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+          <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+          <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="PREDIAGNOSTICO" ColumnName="PREDIAGNOSTICO" />
+          <ScalarProperty Name="OTROSPREDIAGNOSTICO" ColumnName="OTROSPREDIAGNOSTICO" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="MOTIVOESTATUS" ColumnName="MOTIVOESTATUS" />
+          <ScalarProperty Name="InstitucionesRelacionadas" ColumnName="InstitucionesRelacionadas" />
+          <ScalarProperty Name="Diagnostico1" ColumnName="Diagnostico1" />
+          <ScalarProperty Name="Diagnostico2" ColumnName="Diagnostico2" />
+          <ScalarProperty Name="EstatusPediatria" ColumnName="EstatusPediatria" />
+          <ScalarProperty Name="EstatusEVD" ColumnName="EstatusEVD" />
+          <ScalarProperty Name="EstatusPruebasPendientes" ColumnName="EstatusPruebasPendientes" />
+          <ScalarProperty Name="DetalledePruebas" ColumnName="DetalledePruebas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMX00100">
+      <EntityTypeMapping TypeName="CAIDModel.SMX00100">
+        <MappingFragment StoreEntitySet="SMX00100">
+          <ScalarProperty Name="PROPIETARIOTEL4" ColumnName="PROPIETARIOTEL4" />
+          <ScalarProperty Name="PROPIETARIOTEL3" ColumnName="PROPIETARIOTEL3" />
+          <ScalarProperty Name="PROPIETARIOTEL2" ColumnName="PROPIETARIOTEL2" />
+          <ScalarProperty Name="PROPIETARIOTEL1" ColumnName="PROPIETARIOTEL1" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+          <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+          <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+          <ScalarProperty Name="TEL4" ColumnName="TEL4" />
+          <ScalarProperty Name="TEL3" ColumnName="TEL3" />
+          <ScalarProperty Name="TEL2" ColumnName="TEL2" />
+          <ScalarProperty Name="TEL1" ColumnName="TEL1" />
+          <ScalarProperty Name="ZONAID" ColumnName="ZONAID" />
+          <ScalarProperty Name="SECTORID" ColumnName="SECTORID" />
+          <ScalarProperty Name="MUNICIPIOID" ColumnName="MUNICIPIOID" />
+          <ScalarProperty Name="PROVINCIAID" ColumnName="PROVINCIAID" />
+          <ScalarProperty Name="PAISID" ColumnName="PAISID" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMX00500">
+      <EntityTypeMapping TypeName="CAIDModel.SMX00500">
+        <MappingFragment StoreEntitySet="SMX00500">
+          <ScalarProperty Name="ESNUEVO" ColumnName="ESNUEVO" />
+          <ScalarProperty Name="COMENTARIOCAMBIOESTATUS" ColumnName="COMENTARIOCAMBIOESTATUS" />
+          <ScalarProperty Name="DETAUSENCIATERAPEUTA" ColumnName="DETAUSENCIATERAPEUTA" />
+          <ScalarProperty Name="DETTERAPEUTA" ColumnName="DETTERAPEUTA" />
+          <ScalarProperty Name="TIPOGUID" ColumnName="TIPOGUID" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="DETALLES" ColumnName="DETALLES" />
+          <ScalarProperty Name="TERAPIAFIN" ColumnName="TERAPIAFIN" />
+          <ScalarProperty Name="TERAPIAINI" ColumnName="TERAPIAINI" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+          <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+          <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+          <ScalarProperty Name="HORAORDINAL" ColumnName="HORAORDINAL" />
+          <ScalarProperty Name="CITAESTATUS" ColumnName="CITAESTATUS" />
+          <ScalarProperty Name="ASISTIOULTCITA" ColumnName="ASISTIOULTCITA" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="DIA" ColumnName="DIA" />
+          <ScalarProperty Name="HORAFIN" ColumnName="HORAFIN" />
+          <ScalarProperty Name="HORAINI" ColumnName="HORAINI" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="FECHAINI" ColumnName="FECHAINI" />
+          <ScalarProperty Name="ORIGENID" ColumnName="ORIGENID" />
+          <ScalarProperty Name="ENFID" ColumnName="ENFID" />
+          <ScalarProperty Name="TERID" ColumnName="TERID" />
+          <ScalarProperty Name="MEDID" ColumnName="MEDID" />
+          <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAX00001">
+      <EntityTypeMapping TypeName="CAIDModel.PAX00001">
+        <MappingFragment StoreEntitySet="PAX00001">
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="ROWUSERID" ColumnName="ROWUSERID" />
+          <ScalarProperty Name="ROWMDTE" ColumnName="ROWMDTE" />
+          <ScalarProperty Name="ROWCDTE" ColumnName="ROWCDTE" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="ROWIDX" ColumnName="ROWIDX" />
+          <ScalarProperty Name="ESEMPLEADO" ColumnName="ESEMPLEADO" />
+          <ScalarProperty Name="ESCALAID" ColumnName="ESCALAID" />
+          <ScalarProperty Name="ESCOLARIDADID" ColumnName="ESCOLARIDADID" />
+          <ScalarProperty Name="ESTCIVILID" ColumnName="ESTCIVILID" />
+          <ScalarProperty Name="FNACE" ColumnName="FNACE" />
+          <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="NOMBRE2" ColumnName="NOMBRE2" />
+          <ScalarProperty Name="NOMBRE1" ColumnName="NOMBRE1" />
+          <ScalarProperty Name="PASAPORTEID" ColumnName="PASAPORTEID" />
+          <ScalarProperty Name="CEDULAID" ColumnName="CEDULAID" />
+          <ScalarProperty Name="NSSID" ColumnName="NSSID" />
+          <ScalarProperty Name="FILIACIONID" ColumnName="FILIACIONID" />
+          <ScalarProperty Name="REFGUID" ColumnName="REFGUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vCLASIFICADORES">
+      <EntityTypeMapping TypeName="CAIDModel.vCLASIFICADORES">
+        <MappingFragment StoreEntitySet="vCLASIFICADORES">
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="hfechareg" ColumnName="hfechareg" />
+          <ScalarProperty Name="etituloclaspad" ColumnName="etituloclaspad" />
+          <ScalarProperty Name="eidclaspadre" ColumnName="eidclaspadre" />
+          <ScalarProperty Name="dtipoclaspadre" ColumnName="dtipoclaspadre" />
+          <ScalarProperty Name="ctituloclas" ColumnName="ctituloclas" />
+          <ScalarProperty Name="bidclasif" ColumnName="bidclasif" />
+          <ScalarProperty Name="atipoclas" ColumnName="atipoclas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAXESCOLARIDAD">
+      <EntityTypeMapping TypeName="CAIDModel.PAXESCOLARIDAD">
+        <MappingFragment StoreEntitySet="PAXESCOLARIDAD">
+          <ScalarProperty Name="FECHAACTUALIZACION" ColumnName="FECHAACTUALIZACION" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="RESPONSABLEDISTRITO" ColumnName="RESPONSABLEDISTRITO" />
+          <ScalarProperty Name="DISTRITOESCOLAR" ColumnName="DISTRITOESCOLAR" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="FECHADIGITACION" ColumnName="FECHADIGITACION" />
+          <ScalarProperty Name="MaestroAsistente" ColumnName="MaestroAsistente" />
+          <ScalarProperty Name="Maestro" ColumnName="Maestro" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="TIPOCATEGORIA" ColumnName="TIPOCATEGORIA" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="GRADO" ColumnName="GRADO" />
+          <ScalarProperty Name="CENTROEDUCATIVO" ColumnName="CENTROEDUCATIVO" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vPacienteRdDigital">
+      <EntityTypeMapping TypeName="CAIDModel.vPacienteRdDigital">
+        <MappingFragment StoreEntitySet="vPacienteRdDigital">
+          <ScalarProperty Name="FECHANACIMIENTO" ColumnName="FECHANACIMIENTO" />
+          <ScalarProperty Name="PREDIAGNOSTICO" ColumnName="PREDIAGNOSTICO" />
+          <ScalarProperty Name="ROWGUID" ColumnName="ROWGUID" />
+          <ScalarProperty Name="ROWSGXID" ColumnName="ROWSGXID" />
+          <ScalarProperty Name="NUCLEOFAMILIARPARENTESCO" ColumnName="NUCLEOFAMILIARPARENTESCO" />
+          <ScalarProperty Name="NUCLEOFAMILIARCEDULA" ColumnName="NUCLEOFAMILIARCEDULA" />
+          <ScalarProperty Name="NUCLEOFAMILIARAPELLIDOS" ColumnName="NUCLEOFAMILIARAPELLIDOS" />
+          <ScalarProperty Name="NUCLEOFAMILIARNOMBRES" ColumnName="NUCLEOFAMILIARNOMBRES" />
+          <ScalarProperty Name="HORARIOSERVICIO" ColumnName="HORARIOSERVICIO" />
+          <ScalarProperty Name="SERVICIORECIBE" ColumnName="SERVICIORECIBE" />
+          <ScalarProperty Name="CEDULAAGENTESOCIAL" ColumnName="CEDULAAGENTESOCIAL" />
+          <ScalarProperty Name="EMAILAGENTESOCIAL" ColumnName="EMAILAGENTESOCIAL" />
+          <ScalarProperty Name="AGENTESOCIAL" ColumnName="AGENTESOCIAL" />
+          <ScalarProperty Name="TIPOPROCESO" ColumnName="TIPOPROCESO" />
+          <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="CENTRO" ColumnName="CENTRO" />
+          <ScalarProperty Name="RECORDID" ColumnName="RECORDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

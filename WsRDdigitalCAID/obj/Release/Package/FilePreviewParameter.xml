@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/WsRDDigital" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\MC\\SIGES\\app\\ES_SIGES_CAID_V2\\CAID_V2\\WsRDdigitalCAID\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\MC\\SIGES\\app\\ES_SIGES_CAID_V2\\CAID_V2\\WsRDdigitalCAID\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="CAIDEntities-Web.config Connection String" description="" value="metadata=res://*/RDDigitalCAIDModel.csdl|res://*/RDDigitalCAIDModel.ssdl|res://*/RDDigitalCAIDModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=CAIDSIGES01\CAID;Initial Catalog=CAID;Persist Security Info=True;User ID=siges;Password=CAID@P@$$W0rd1&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\MC\\SIGES\\app\\ES_SIGES_CAID_V2\\CAID_V2\\WsRDdigitalCAID\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CAIDEntities']/@connectionString" />
+  </parameter>
+</parameters>
